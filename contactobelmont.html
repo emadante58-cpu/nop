@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Belmont</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Maiden+Orange&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: #2E7D32;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+            padding-bottom: 60px;
+        }
+
+        .header-section {
+            width: 100%;
+            background-color: #66BB6A;
+            padding: 30px 0;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Maiden Orange', cursive;
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .profile-img-container {
+            width: 60%;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
+        }
+
+        .profile-img {
+            width: 100%;
+            display: block;
+        }
+
+        .contact-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            display: block;
+            width: 80%;
+            transition: transform 0.2s ease;
+        }
+
+            .contact-link:hover {
+                transform: scale(1.05);
+            }
+
+        .btn-img {
+            width: 100%;
+            display: block;
+        }
+
+        .back-btn {
+            margin-top: 50px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Maiden Orange', cursive;
+            font-size: 1.2rem;
+            border-bottom: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <div class="header-section">
+            <h1>CONTACTO</h1>
+        </div>
+
+        <div class="profile-img-container">
+            <img src="imagenindexdisenador/imagenesbelmont/fotocontactobelmont.png" class="profile-img" alt="Mascota Belmont Contacto">
+        </div>
+
+        <div class="contact-menu">
+            <a href="https://www.instagram.com/violet_belmont18" target="_blank" class="contact-link">
+                <img src="imagenindexdisenador/imagenesbelmont/botoninsta.png" class="btn-img" alt="Instagram Belmont">
+            </a>
+
+            <a href="https://wa.me/525541437346" target="_blank" class="contact-link">
+                <img src="imagenindexdisenador/imagenesbelmont/botonwats.png" class="btn-img" alt="WhatsApp Belmont">
+            </a>
+
+            <a href="mailto:canalcoffetv@gmail.com" class="contact-link">
+                <img src="imagenindexdisenador/imagenesbelmont/correoboton.png" class="btn-img" alt="Correo Belmont">
+            </a>
+        </div>
+
+        <a href="Portafoliobelmont.html" class="back-btn">← VOLVER</a>
+    </div>
+
+</body>
+</html>

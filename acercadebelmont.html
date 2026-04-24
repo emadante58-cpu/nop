@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de | Belmont</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Maiden+Orange&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: #2E7D32;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+            padding-bottom: 40px;
+        }
+
+        .header-section {
+            width: 100%;
+            background-color: #66BB6A;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-family: 'Maiden Orange', cursive;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .info-card {
+            background-color: #C8E6C9;
+            width: 85%;
+            margin-top: 30px;
+            padding: 25px 15px;
+            border-radius: 40px;
+            box-shadow: 0px 8px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #1B5E20;
+            font-size: 1rem;
+            line-height: 1.4;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .about-img {
+            width: 150px;
+            margin-top: 20px;
+            filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.3));
+        }
+
+        /* Estilo para el contenedor del video */
+        .video-container {
+            width: 90%;
+            margin-top: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            border: 3px solid #66BB6A;
+            aspect-ratio: 16 / 9; /* Mantiene la proporción correcta */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .back-btn {
+            margin-top: 30px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Maiden Orange', cursive;
+            font-size: 1.2rem;
+            border-bottom: 2px solid white;
+            transition: opacity 0.3s;
+        }
+
+        .back-btn:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <div class="header-section">
+            <h1>ACERCA DE</h1>
+        </div>
+
+        <div class="info-card">
+            <p>
+                Diseñadora enfocada en la creación de escenarios y modelado 3D, con interés en construir espacios visuales que transmitan atmósferas y narrativa.
+            </p>
+            <p>
+                Además, cuenta con experiencia en diseño gráfico aplicado a productos, desarrollando propuestas visuales para carteles, perfumes, bebidas y piezas editoriales inspiradas en revistas de estilo como Vogue.
+            </p>
+        </div>
+
+        <img src="imagenesbelmont/acercadebelmont.png" class="about-img" alt="Ilustración Belmont">
+
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/cFwsdfDYrAE"
+                title="Belmont Design Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <a href="disenadorbelmont.html" class="back-btn">← VOLVER</a>
+    </div>
+
+</body>
+</html>

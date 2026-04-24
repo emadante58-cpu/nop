@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestra 3 y 4 | David</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maiden+Orange&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #4d0000; 
+            font-family: 'Maiden Orange', cursive;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+            padding-bottom: 50px;
+        }
+
+        /* --- ENCABEZADOS --- */
+        .header-muestra {
+            width: 100%;
+            background-color: #7a0000;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .header-muestra:first-child { margin-top: 0; }
+
+        h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+        h2 { margin: 10px 0 0 0; font-size: 1.5rem; color: #ff4d4d; letter-spacing: 1px; }
+
+        /* --- TARJETAS --- */
+        .card-proyecto {
+            width: 90%;
+            max-width: 550px;
+            background-color: #2b0000;
+            border-radius: 20px;
+            padding: 25px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            border: 2px solid #7a0000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* --- VIDEO (MUESTRA 3) --- */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #ff0000;
+            margin-bottom: 25px;
+            background-color: #000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* --- GALERÍA (MUESTRA 4) --- */
+        .galeria-renders {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .img-render {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid #ff4d4d;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .img-render:hover, .img-render:active {
+            transform: scale(1.05);
+            border-color: #ffffff;
+            box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+        }
+
+        /* --- DESCRIPCIÓN --- */
+        .descripcion {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.6;
+            padding: 0 15px;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+            text-align: justify;
+        }
+
+        .descripcion strong {
+            color: #ff4d4d;
+            font-weight: 600;
+        }
+
+        /* --- BOTÓN SIGUIENTE --- */
+        .btn-muestra-sig {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 40px;
+            font-family: 'Maiden Orange', cursive;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .btn-muestra-sig:active {
+            transform: scale(1.25);
+            filter: drop-shadow(0 0 20px white) brightness(1.3);
+        }
+
+        /* --- BOTÓN VOLVER (RESIDENT EVIL) --- */
+        .btn-volver-re {
+            background-color: #000;
+            color: #ff0000;
+            border: 3px solid #ff0000;
+            padding: 10px 45px;
+            font-size: 1.6rem;
+            font-family: 'Maiden Orange', cursive;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            animation: parpadeoTerror 1s infinite;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        @keyframes parpadeoTerror {
+            0%, 100% { box-shadow: 0 0 8px #ff0000; opacity: 1; border-color: #ff0000; }
+            50% { box-shadow: 0 0 25px #ff0000, inset 0 0 10px #ff0000; opacity: 0.7; border-color: #5e0000; }
+        }
+
+        .btn-volver-re:hover {
+            background-color: #ff0000;
+            color: #000;
+            animation: none;
+            box-shadow: 0 0 40px #ff0000;
+        }
+
+        /* --- BOTÓN CASITA --- */
+        .casita-img {
+            width: 70px;
+            height: auto;
+            cursor: pointer;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 10px;
+        }
+
+        .casita-img:active {
+            transform: scale(1.25);
+            filter: drop-shadow(0 0 20px white) brightness(1.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-muestra">
+        <h1>MUESTRA 3</h1>
+        <h2>3D ACTING & LIPSYNC</h2>
+    </div>
+
+    <div class="card-proyecto">
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/99iViinyAWk" 
+                title="Pidiendo Tacos en 3D" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="descripcion">
+            Ejercicio de <strong>3D Acting</strong> y sincronización labial con doblaje original. La escena representa a TAU interactuando con el Slayer en un puesto de tacos. Este proyecto destaca el manejo del <strong>timing cómico</strong>, la expresión corporal y la adaptación de audio personalizado a la gesticulación de los modelos.
+        </p>
+    </div>
+
+    <div class="header-muestra">
+        <h1>MUESTRA 4</h1>
+        <h2>RENDERS Y COMPOSICIÓN ESTÁTICA</h2>
+    </div>
+
+    <div class="card-proyecto">
+        <div class="galeria-renders">
+            <img src="disenador2david/taulatamblender.png" class="img-render" alt="Render de TAU LATAM">
+            <img src="disenador2david/rendervocho.jpg" class="img-render" alt="Render del Vocho Tuneado">
+        </div>
+
+        <p class="descripcion">
+            Estudio de <strong>modelado inorgánico y orgánico</strong>, destacando la creación del personaje principal <strong>TAU</strong> en su versión regional y un clásico <strong>Vocho tuneado</strong> con estética urbana. Se aplicaron técnicas avanzadas de <strong>texturizado PBR</strong> y <strong>composición de iluminación</strong> para lograr un acabado detallado y realista en cada render estático.
+        </p>
+
+        <a href="proyectosblendermuestra5.html" class="btn-muestra-sig" id="btn-m5">MUESTRA 5</a>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: 10px;">
+        <a href="programasdavid.html" class="btn-volver-re" id="btn-volver">VOLVER</a>
+
+        <a href="index.html" id="btn-casita">
+            <img src="disenador2david/casitaboton.png" class="casita-img" alt="Inicio">
+        </a>
+    </div>
+
+    <audio id="sonido-tp" src="disenador2david/tpvalorantsoundeffect.m4a"></audio>
+    <audio id="sonido-re" src="disenador2david/sonidoresidentevilbotonvolver.m4a"></audio>
+
+    <script>
+        const s_tp = document.getElementById('sonido-tp');
+        const s_re = document.getElementById('sonido-re');
+
+        const btnM5 = document.getElementById('btn-m5');
+        const btnVolver = document.getElementById('btn-volver');
+        const btnCasita = document.getElementById('btn-casita');
+
+        function navegarConAudio(elemento, sonido, destino, tiempo) {
+            elemento.addEventListener('click', function(e) {
+                e.preventDefault();
+                sonido.currentTime = 0;
+                sonido.play();
+                setTimeout(() => {
+                    window.location.href = destino;
+                }, tiempo);
+            });
+        }
+
+        navegarConAudio(btnM5, s_tp, "proyectosblendermuestra5.html", 1500);
+        navegarConAudio(btnCasita, s_tp, "index.html", 1500);
+        navegarConAudio(btnVolver, s_re, "programasdavid.html", 1200);
+    </script>
+
+</body>
+</html>

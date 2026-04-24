@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Animación y Arte Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Maiden+Orange&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: #2E7D32;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+            padding: 30px 0;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-family: 'Maiden Orange', cursive;
+            color: #ffffff;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+
+        .designer-section {
+            width: 85%;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .designer-title {
+            font-family: 'Maiden Orange', cursive;
+            color: #ffffff;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #66BB6A;
+            margin-bottom: 5px;
+            padding-left: 5px;
+        }
+
+        .contact-card {
+            background-color: #66BB6A;
+            padding: 15px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            border: 2px solid transparent;
+        }
+
+            .contact-card:hover {
+                transform: scale(1.03);
+                border-color: white;
+            }
+
+        .info h3 {
+            margin: 0;
+            font-family: 'Maiden Orange', cursive;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .info p {
+            margin: 2px 0 0 0;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .btn-volver {
+            margin-top: 20px;
+            background-color: #1b5e20;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: background 0.3s;
+        }
+
+            .btn-volver:hover {
+                background-color: #0a330c;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <h1>CONTACTO</h1>
+
+        <div class="designer-section">
+            <div class="designer-title">DISEÑADOR 1</div>
+
+            <a href="mailto:eljoshda@gmail.com" class="contact-card">
+                <span>✉️</span>
+                <div class="info">
+                    <h3>CORREO</h3>
+                    <p>eljoshda@gmail.com</p>
+                </div>
+            </a>
+
+            <a href="https://wa.me/525579912539" class="contact-card">
+                <span>📱</span>
+                <div class="info">
+                    <h3>WHATSAPP</h3>
+                    <p>+52 55 7991 2539</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="designer-section">
+            <div class="designer-title">DISEÑADOR 2</div>
+
+            <a href="mailto:emadante58@gmail.com" class="contact-card">
+                <span>✉️</span>
+                <div class="info">
+                    <h3>CORREO</h3>
+                    <p>emadante58@gmail.com</p>
+                </div>
+            </a>
+
+            <a href="https://wa.me/521000000000" class="contact-card">
+                <span>📱</span>
+                <div class="info">
+                    <h3>WHATSAPP</h3>
+                    <p>+52 5541437345</p>
+                </div>
+            </a>
+        </div>
+
+        <a href="index.html" class="btn-volver">← VOLVER AL INICIO</a>
+
+        <img src="indeximagenesprincipal/Ranita%20boton.png" style="width: 70px; margin-top: 25px; opacity: 0.8;" alt="Ranita">
+    </div>
+
+</body>
+</html>

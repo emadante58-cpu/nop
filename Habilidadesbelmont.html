@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades | Belmont</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Maiden+Orange&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: #2E7D32;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+            padding-bottom: 40px;
+        }
+
+        /* Encabezado */
+        .header-section {
+            width: 100%;
+            background-color: #66BB6A;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-family: 'Maiden Orange', cursive;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* Imagen de la Ranita Habilidades */
+        .skills-img {
+            width: 220px;
+            margin-top: 40px;
+            filter: drop-shadow(0px 8px 15px rgba(0,0,0,0.3));
+        }
+
+        /* Cuadro de Habilidades (El rectángulo clarito) */
+        .skills-card {
+            background-color: #C8E6C9; /* Color verde muy clarito */
+            width: 85%;
+            margin-top: 30px;
+            padding: 25px 15px;
+            border-radius: 40px; /* Bordes muy redondeados */
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .skills-list {
+            margin: 0;
+            padding-left: 25px; /* Espacio para que las viñetas no se salgan */
+            list-style-type: disc;
+            color: #1B5E20; /* Verde oscuro para el texto */
+            font-weight: bold;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+            .skills-list li {
+                margin-bottom: 8px;
+            }
+
+        /* Botón Volver */
+        .back-btn {
+            margin-top: auto;
+            padding-top: 30px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Maiden Orange', cursive;
+            font-size: 1.2rem;
+            border-bottom: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <div class="header-section">
+            <h1>HABILIDADES</h1>
+        </div>
+
+        <img src="imagenindexdisenador/imagenesbelmont/fotohabbelmt.png" class="skills-img" alt="Habilidades de Belmont">
+
+        <div class="skills-card">
+            <ul class="skills-list">
+                <li>Modelado 3D</li>
+                <li>Diseño de escenarios</li>
+                <li>Iluminación básica</li>
+                <li>Texturizado</li>
+                <li>Diseño de carteles</li>
+                <li>Diseño para productos (perfumes, bebidas, camisetas)</li>
+                <li>Composición visual</li>
+            </ul>
+        </div>
+
+        <a href="disenadorBelmont.html" class="back-btn">← VOLVER</a>
+    </div>
+
+</body>
+</html>

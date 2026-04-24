@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Animación y Arte Digital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Maiden+Orange&display=swap" rel="stylesheet">
+
+    <style>
+        /* Configuración base */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: #2E7D32;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+        }
+
+        /* Encabezado con Elipse */
+        .header-section {
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-top: 45px;
+            min-height: 160px;
+        }
+
+        .elipse-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        #mensaje-bienvenida {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            font-family: 'Maiden Orange', cursive;
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 0;
+            padding: 0 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Sección de la Ranita */
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            z-index: 3;
+            margin-top: -10px;
+        }
+
+        .btn-ranita {
+            width: 160px;
+            cursor: pointer;
+            transition: transform 0.1s ease-in-out;
+            filter: drop-shadow(0px 8px 10px rgba(0,0,0,0.4));
+        }
+
+            .btn-ranita:active {
+                transform: scale(0.85);
+            }
+
+        /* Burbuja de texto */
+        .slogan-box {
+            background-color: #66BB6A;
+            color: #ffffff;
+            padding: 20px 25px;
+            border-radius: 50px;
+            text-align: center;
+            position: relative;
+            margin-top: 60px;
+            font-family: 'Maiden Orange', cursive;
+            font-size: 1.2rem;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            width: 70%;
+        }
+
+            .slogan-box::before {
+                content: '';
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 70px;
+                height: 70px;
+                background-color: #66BB6A;
+                border-radius: 50%;
+                z-index: -1;
+            }
+
+        /* Sección de Botones Inferiores */
+        .footer-section {
+            width: 100%;
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            z-index: 3;
+        }
+
+        .btn-disenadores img {
+            width: 240px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+            .btn-disenadores img:hover {
+                transform: scale(1.03);
+            }
+
+        .btn-contacto-texto {
+            background-color: #66BB6A;
+            color: white;
+            padding: 12px 60px;
+            border-radius: 30px;
+            font-family: 'Maiden Orange', cursive;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border: 2px solid white;
+            text-decoration: none;
+            transition: transform 0.2s ease, background-color 0.2s;
+        }
+
+            .btn-contacto-texto:hover {
+                transform: scale(1.05);
+                background-color: #4CAF50;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <div class="header-section">
+            <img src="indeximagenesprincipal/elipse.png" class="elipse-bg" alt="Decoración">
+            <h1 id="mensaje-bienvenida">CARGANDO...</h1>
+        </div>
+
+        <div class="main-section">
+            <img src="indeximagenesprincipal/Ranita%20boton.png" id="ranita-interactiva" class="btn-ranita" alt="Botón Rana">
+
+            <div class="slogan-box">
+                CREATIVIDAD QUE<br>COBRA VIDA
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <a href="disenadores.html" class="btn-disenadores">
+                <img src="indeximagenesprincipal/Disenadores%20boton.png" alt="Ir a Diseñadores">
+            </a>
+
+            <a href="contacto.html" class="btn-contacto-texto">
+                CONTACTO
+            </a>
+        </div>
+    </div>
+
+    <audio id="sonido-ranita" src="indeximagenesprincipal/ranita%20sonido.m4a"></audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bienvenida = document.getElementById('mensaje-bienvenida');
+            const ranita = document.getElementById('ranita-interactiva');
+            const sonido = document.getElementById('sonido-ranita');
+
+            // Lógica del nombre
+            let nombre = sessionStorage.getItem('nombreVisitante');
+            if (!nombre) {
+                nombre = prompt("¡Hola! ¿Cómo te llamas?");
+                if (nombre && nombre.trim() !== "") {
+                    sessionStorage.setItem('nombreVisitante', nombre);
+                } else {
+                    nombre = "Invitado";
+                }
+            }
+            bienvenida.textContent = `BIENVENIDO, ${nombre.toUpperCase()}`;
+
+            // Lógica del sonido
+            ranita.addEventListener('click', () => {
+                sonido.currentTime = 0;
+                sonido.play().catch(e => console.log("Interacción requerida para audio"));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas | David</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #7a0000; 
+            font-family: 'Maiden Orange', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* --- MARCO CON BRILLO EXTREMO --- */
+        .marco-principal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('disenador2david/indexdisenadormarco.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 100;
+            animation: brilloMarco 4s ease-in-out infinite;
+        }
+
+        @keyframes brilloMarco {
+            0%, 100% { 
+                filter: brightness(1) contrast(1) saturate(1) drop-shadow(0 0 0px transparent); 
+            }
+            50% { 
+                filter: brightness(2.5) contrast(1.2) saturate(1.8) drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)); 
+            } 
+        }
+
+        .contenedor-programas {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+            z-index: 10;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin: 0 0 20px 0;
+            text-shadow: 4px 4px 15px rgba(0,0,0,0.9);
+            letter-spacing: 3px;
+        }
+
+        .lista-logos {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .btn-programa {
+            width: 170px; 
+            height: auto;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: block;
+            filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.5));
+        }
+
+        .btn-programa:active, .casita-img:active {
+            transform: scale(1.25);
+            filter: drop-shadow(0px 0px 20px white) brightness(1.3);
+        }
+
+        /* --- BOTÓN VOLVER --- */
+        .btn-volver-re {
+            background-color: #000;
+            color: #ff0000;
+            border: 3px solid #ff0000;
+            padding: 12px 45px;
+            font-size: 1.8rem;
+            font-family: 'Maiden Orange', cursive;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 0 15px #5e0000;
+            animation: parpadeoTerror 1s infinite;
+            display: inline-block;
+            transition: 0.2s;
+            margin-bottom: 20px;
+        }
+
+        @keyframes parpadeoTerror {
+            0%, 100% { box-shadow: 0 0 10px #ff0000; opacity: 1; border-color: #ff0000; }
+            50% { box-shadow: 0 0 35px #ff0000, inset 0 0 15px #ff0000; opacity: 0.6; border-color: #5e0000; }
+        }
+
+        .btn-volver-re:hover {
+            background-color: #ff0000;
+            color: #000;
+            animation: none;
+            box-shadow: 0 0 40px #ff0000;
+        }
+
+        .casita-container {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .casita-img {
+            width: 75px;
+            cursor: pointer;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="marco-principal"></div>
+
+    <div class="contenedor-programas">
+        <h1>PROGRAMAS</h1>
+
+        <div class="lista-logos">
+            <img src="disenador2david/mayaautodesk.png" id="btn-maya" class="btn-programa" alt="Maya">
+            <img src="disenador2david/photoshop.png" id="btn-photoshop" class="btn-programa" alt="Photoshop">
+            <img src="disenador2david/blendernegro.png" id="btn-blender" class="btn-programa" alt="Blender">
+        </div>
+
+        <a href="disenador2david/paginabellev.html" class="btn-volver-re" id="btn-volver">VOLVER</a>
+
+        <a href="index.html" class="casita-container" id="btn-casita">
+            <img src="disenador2david/casitaboton.png" class="casita-img" alt="Inicio">
+        </a>
+    </div>
+
+    <audio id="sonido-tp" src="disenador2david/tpvalorantsoundeffect.m4a"></audio>
+    <audio id="sonido-re" src="disenador2david/sonidoresidentevilbotonvolver.m4a"></audio>
+
+    <script>
+        const sonidoTp = document.getElementById('sonido-tp');
+        const sonidoRE = document.getElementById('sonido-re');
+        
+        const btnVolver = document.getElementById('btn-volver');
+        const btnMaya = document.getElementById('btn-maya');
+        const btnPhotoshop = document.getElementById('btn-photoshop');
+        const btnBlender = document.getElementById('btn-blender');
+        const btnCasita = document.getElementById('btn-casita');
+
+        function navegarConTiempo(boton, destinoUrl, tipoSonido) {
+            boton.addEventListener('click', function(e) {
+                e.preventDefault(); 
+                
+                tipoSonido.currentTime = 0;
+                tipoSonido.play();
+
+                setTimeout(() => {
+                    window.location.href = destinoUrl;
+                }, 1500);
+            });
+        }
+
+        navegarConTiempo(btnMaya, 'proyectosmaya.html', sonidoTp);
+        navegarConTiempo(btnPhotoshop, 'proyectosphotoshop.html', sonidoTp);
+        navegarConTiempo(btnBlender, 'proyectosblender.html', sonidoTp);
+        navegarConTiempo(btnCasita, 'index.html', sonidoTp);
+        navegarConTiempo(btnVolver, btnVolver.getAttribute('href'), sonidoRE);
+    </script>
+
+</body>
+</html>

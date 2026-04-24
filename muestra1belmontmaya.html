@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya Portafolio | Belmont</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Maiden+Orange&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: #E69138;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+            padding-bottom: 40px;
+        }
+
+        .header-section {
+            width: 100%;
+            background-color: #F6B26B;
+            padding: 30px 0;
+            text-align: center;
+            clip-path: ellipse(100% 70% at 50% 30%);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Maiden Orange', cursive;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .pixel-icon {
+            width: 100px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+        }
+
+        .work-container {
+            width: 90%;
+            background-color: #ffffff;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+        }
+
+        .work-img {
+            width: 100%;
+            display: block;
+        }
+
+        .description-box {
+            width: 85%;
+            text-align: center;
+            padding: 10px;
+        }
+
+            .description-box p {
+                font-family: 'Maiden Orange', cursive;
+                color: #ffffff;
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin: 0;
+            }
+
+        .next-sample-btn {
+            margin-top: 30px;
+            width: 180px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+            .next-sample-btn:hover {
+                transform: scale(1.05);
+            }
+
+        .back-link {
+            margin-top: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <div class="header-section">
+            <h1>MUESTRA 1</h1>
+        </div>
+
+        <img src="imagenindexdisenador/imagenesbelmont/hambmuestra1belm.png" class="pixel-icon" alt="Icono Hamburguesa">
+
+        <div class="work-container">
+            <img src="imagenindexdisenador/imagenesbelmont/mayabelmon1.png" class="work-img" alt="Render Maya Hamburguesa">
+        </div>
+
+        <div class="description-box">
+            <p>
+                Modelado 3D realizado en Maya de una hamburguesa y una bebida, Creada para representar una escena atractivamente deliciosa.
+            </p>
+        </div>
+
+        <a href="muestra2mayabelmont.html">
+            <img src="imagenindexdisenador/imagenesbelmont/botonmuestra2m.png" class="next-sample-btn" alt="Ver Muestra 2">
+        </a>
+
+        <a href="portafoliobelmont.html" class="back-link">VOLVER</a>
+    </div>
+
+</body>
+</html>
